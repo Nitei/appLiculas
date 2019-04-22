@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+
+    <div (click)="verPeli(item)" class="col-md-4" *ngFor=" let item of items">
+      <div class="card card-columns">
+        <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{ item.poster_path }}" class="card-img-top" alt="...">
+        <a [href]="item.href"></a>
+        <div class="card-body">
+          <h5 class="card-title">{{item.title}}</h5>
+          <p class="card-text">
+            <span *ngFor="let artista of item.artists" class="badge badge-pill badge-primary">{{artista.name}}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
