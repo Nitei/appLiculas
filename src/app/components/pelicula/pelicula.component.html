@@ -1,3 +1,18 @@
-<p>
-  pelicula works!
-</p>
+<div class="container-fluid">
+  <div class="row w-100">
+    <nav class="navbar navbar-light bg-light w-100">
+      <a class="navbar-brand" [routerLink]="[ '/home' ]">Home</a>
+    </nav>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="card mb-3 row">
+    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{ peliData?.poster_path }}" class="image" *ngIf="peliData?.poster_path">
+    <div class="card-body">
+      <h5 class="card-title">{{peliData?.title}}</h5>
+      <p class="card-text">{{peliData?.overview}}</p>
+      <p class="card-text"><small class="text-muted">Release: {{peliData?.release_date}}</small></p>
+    </div>
+  </div>
+</div>

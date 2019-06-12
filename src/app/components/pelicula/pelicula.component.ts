@@ -8,11 +8,11 @@ import { PeliculasService } from '../../services/peliculas.service';
   styleUrls: ['./pelicula.component.sass']
 })
 export class PeliculaComponent implements OnInit {
-  peliData: any;
+  peliData: any[];
 
   constructor(private route: ActivatedRoute, private service: PeliculasService) { 
     // console.log(this.route.snapshot.params)
-    this.service.getMovie(this.route.snapshot.params['id']).subscribe((data: any) => {
+    this.service.getMovie(this.route.snapshot.params['id']).subscribe((data: any[]) => {
       this.peliData = data;
       console.log(this.peliData);
     })

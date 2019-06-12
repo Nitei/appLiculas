@@ -7,16 +7,26 @@ import { PeliculasService } from '../../services/peliculas.service';
   styleUrls: ['./home.component.sass']
 })
 export class HomeComponent implements OnInit {
-  pelisPopulares: object;
+  pelisPopulares: any;
+
 
   constructor(private service: PeliculasService) {
-    this.service.getPopulares().subscribe(x => {
-      this.pelisPopulares = x.results
-      console.log(this.pelisPopulares);
+    this.service.getPopulares().subscribe((x: any) => {
+      this.pelisPopulares = x;
     })
    }
 
   ngOnInit() {
+  }
+
+  searchMovie(event: any): void {
+
+    console.log(event);
+    this.service.searchMovie(event.target.value).subscribe((x: any) => {
+      this.pelisPopulares = x;
+    })
+    event.parentNode.apendChild('<div>')
+
   }
 
 }

@@ -12,4 +12,8 @@ export class BusquedaComponent implements OnInit {
   ngOnInit() {
   }
 
+    searchMovie(name: string) {
+    
+  }
+
 }

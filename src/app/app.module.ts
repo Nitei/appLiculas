@@ -9,6 +9,7 @@ import { BusquedaComponent } from './components/busqueda/busqueda.component'
 import { PeliculasService } from './services/peliculas.service';
 import { TarjetasComponent } from './shared/tarjetas/tarjetas.component';
 import { PeliculaComponent } from './components/pelicula/pelicula.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PeliculaComponent } from './components/pelicula/pelicula.component';
     HomeComponent,
     BusquedaComponent,
     TarjetasComponent,
-    PeliculaComponent
+    PeliculaComponent,
+    NavbarComponent
     ],
   imports: [
     BrowserModule,
